@@ -85,28 +85,414 @@ h2 { margin-bottom: 24px; font-family: var(--serif); font-size: clamp(2.2rem, 4v
 .resume-copy p { max-width: 250px; margin: 0; }
 .site-footer { color: #91a09d; background: var(--ink); font-size: 0.72rem; }
 .footer-wrap { min-height: 75px; }
-@media (max-width: 780px) {
-  .container, .hero-rule { width: min(100% - 36px, 1120px); }
-  .nav-wrap { min-height: 68px; }
-  nav { gap: 13px; font-size: 0.7rem; }
-  nav a:nth-child(1), nav a:nth-child(3) { display: none; }
-  .hero { padding-top: 72px; }
-  .hero-grid, .split-section, .feature-grid { grid-template-columns: 1fr; gap: 44px; }
-  .hero-panel { max-width: 390px; }
-  .hero-rule { margin-top: 68px; }
-  .section { padding: 76px 0; }
-  .feature-grid { padding-top: 65px; padding-bottom: 65px; gap: 24px; }
-  .feature-number { padding-top: 0; }
-  .feature-diagram { min-height: 260px; }
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .portfolio-card { min-height: 230px; }
-  .section-heading, .resume-wrap, .resume-copy { align-items: flex-start; flex-direction: column; }
-  .resume-copy { gap: 24px; }
+
+/* ==================================================
+   EXPERIENCE
+   ================================================== */
+
+.experience-section {
+  padding: 112px 0;
+  background: #e9efeb;
 }
+
+.experience-list {
+  border-top: 1px solid #cbd5ce;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 50px;
+  padding: 42px 0;
+  border-bottom: 1px solid #cbd5ce;
+}
+
+.experience-date {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.experience-content {
+  max-width: 720px;
+}
+
+.experience-type {
+  margin-bottom: 7px;
+  color: var(--teal);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.experience-content h3 {
+  margin-bottom: 5px;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.experience-company {
+  margin-bottom: 17px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.experience-content > p:last-of-type {
+  color: var(--muted);
+}
+
+
+/* ==================================================
+   TAGS
+   ================================================== */
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.tag-row span {
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  color: var(--teal-dark);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   PROJECTS
+   ================================================== */
+
+.projects-section {
+  background: var(--white);
+}
+
+.project-feature {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  margin-bottom: 36px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.project-image-wrap {
+  min-height: 510px;
+  overflow: hidden;
+  background: #dfe7e2;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 510px;
+  display: block;
+  object-fit: cover;
+}
+
+.project-copy {
+  padding: 48px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 27px;
+  color: var(--teal);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.project-copy h3,
+.project-card h3 {
+  margin-bottom: 20px;
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.project-copy > p {
+  color: var(--muted);
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.project-card {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 38px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.project-card-musicle {
+  background: #f5e8dc;
+}
+
+.project-card p {
+  max-width: 470px;
+  color: var(--muted);
+}
+
+.card-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.card-links a {
+  color: var(--teal-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-bottom: 1px solid currentColor;
+}
+
+.project-status {
+  margin-top: 35px;
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   ENGR 095 LINKS
+   ================================================== */
+
+.feature-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.feature-link {
+  color: #c9e8e0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-bottom: 1px solid currentColor;
+}
+
+
+/* ==================================================
+   SKILLS
+   ================================================== */
+
+.skills-section {
+  background: var(--paper);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.skill-group {
+  min-height: 180px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-group h3 {
+  margin-bottom: 14px;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.skill-group p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   CONTACT
+   ================================================== */
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-links > a:not(.button) {
+  color: var(--teal-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  border-bottom: 1px solid currentColor;
+}
+
+@media (max-width: 780px) {
+  .container,
+  .hero-rule {
+    width: min(100% - 36px, 1120px);
+  }
+
+  .nav-wrap {
+    min-height: 68px;
+  }
+
+  nav {
+    gap: 13px;
+    font-size: 0.7rem;
+  }
+
+  nav a:nth-child(1),
+  nav a:nth-child(3) {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 72px;
+  }
+
+  .hero-grid,
+  .split-section,
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .hero-panel {
+    max-width: 390px;
+  }
+
+  .hero-rule {
+    margin-top: 68px;
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+
+  .feature-grid {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    gap: 24px;
+  }
+
+  .feature-number {
+    padding-top: 0;
+  }
+
+  .feature-diagram {
+    min-height: 260px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card {
+    min-height: 230px;
+  }
+
+  .section-heading,
+  .resume-wrap,
+  .resume-copy {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resume-copy {
+    gap: 24px;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image-wrap,
+  .project-image {
+    min-height: 360px;
+  }
+
+  .project-copy {
+    padding: 32px;
+  }
+
+  .project-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-actions,
+  .project-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-links {
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 430px) {
-  h1 { font-size: 3.2rem; }
-  .brand { font-size: 0.82rem; }
-  .nav-resume { padding: 6px 9px; }
-  .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; }
-  .footer-wrap { align-items: flex-start; flex-direction: column; justify-content: center; gap: 2px; }
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .brand {
+    font-size: 0.82rem;
+  }
+
+  .nav-resume {
+    padding: 6px 9px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
 }
