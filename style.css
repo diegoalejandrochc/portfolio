@@ -445,58 +445,70 @@ h2 {
 
 
 .hero-panel {
-  padding: 28px;
+  padding: 30px;
 
   border: 1px solid #cbd9d1;
 
-  background:
-    rgba(
-      251,
-      252,
-      249,
-      0.68
-    );
+  background: rgba(
+    251,
+    252,
+    249,
+    0.72
+  );
+}
+
+
+.panel-label {
+  margin-bottom: 18px;
 }
 
 
 .current-item {
-  display: flex;
+  display: grid;
 
-  align-items: flex-start;
+  grid-template-columns: 8px 1fr;
 
-  gap: 13px;
+  gap: 14px;
 
-  padding: 22px 0;
+  padding: 18px 0;
 
-  border-bottom:
-    1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+
+.current-item:first-of-type {
+  padding-top: 8px;
 }
 
 
 .current-item strong {
   display: block;
 
-  font-size: 0.88rem;
+  margin-bottom: 3px;
+
+  color: var(--ink);
+
+  font-size: 0.92rem;
+
+  line-height: 1.35;
 }
 
 
 .current-item p {
-  margin:
-    3px 0
-    0;
+  margin: 0;
 
   color: var(--muted);
 
-  font-size: 0.78rem;
+  font-size: 0.8rem;
+
+  line-height: 1.45;
 }
 
 
 .signal-dot {
-  width: 9px;
+  width: 7px;
 
-  height: 9px;
-
-  flex: 0 0 auto;
+  height: 7px;
 
   margin-top: 7px;
 
@@ -504,14 +516,7 @@ h2 {
 
   background: var(--orange);
 
-  box-shadow:
-    0 0 0 5px
-    rgba(
-      226,
-      111,
-      61,
-      0.14
-    );
+  box-shadow: none;
 }
 
 
@@ -520,7 +525,9 @@ h2 {
 
   justify-content: space-between;
 
-  padding-top: 19px;
+  gap: 20px;
+
+  padding-top: 20px;
 
   color: var(--muted);
 
@@ -886,12 +893,10 @@ h2 {
 
 .project-actions {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 10px;
 
-  margin-top: 32px;
+  margin-top: 44px;
 }
 
 
@@ -1444,6 +1449,7 @@ h2 {
   }
 
 
+   
   .hero-panel {
     max-width: 420px;
   }
